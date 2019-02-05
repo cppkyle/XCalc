@@ -240,7 +240,7 @@ r = sqrt(A/pi)
 r = ${radius}
 			</textarea>
 			`
-			,2);
+			,3);
 			autoResizeResultTextArea();
 			break;
 			
@@ -256,7 +256,7 @@ A = pi * ${radius}²
 A = ${area}
 			</textarea>
 			`
-			,2);
+			,3);
 			autoResizeResultTextArea();
 			break;
 			
@@ -273,7 +273,7 @@ A = (pi * ${radius}²) + (pi * ${apothem} * ${radius})
 A = ${area}
 			</textarea>
 			`
-			,2);
+			,3);
 			autoResizeResultTextArea();
 			break;
 		

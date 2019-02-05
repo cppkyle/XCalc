@@ -1,5 +1,3 @@
-//<br><button id="button" onclick="calculate()">Calculate</button>
-
 function appendToOperationArea(string, id) {
 	document.getElementById("operationArea" + id).innerHTML = string + `<div id="operationArea${id+1}"></div>`;
 }

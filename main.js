@@ -383,7 +383,7 @@ function update(mode) {
 			Number of Sides: <input type="number" id="textInput" name="sideCount"><br>
 			Length of One Side: <input type="number" id="textInput" name="sideLength"><br>
 			Apothem: <input type="number" id="textInput" name="baseApothem"><br>
-			<br><button id="calculateButton" onclick="calculatePolygon(0)">Calculate</button>
+			<br><button id="calculateButton" onclick="calculatePolygon(2)">Calculate</button>
 			`
 			,2);
 			break;

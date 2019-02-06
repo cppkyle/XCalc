@@ -11,6 +11,51 @@ function autoResizeResultTextArea() {
 	document.getElementById("resultTextArea").style.width = (document.getElementById("resultTextArea").scrollWidth)+"px";
 }
 
+function addLinearRegressionInputField() {
+	document.getElementById("operationArea0").innerHTML += `X: <input type="number" id="textInput" class="xInput"><br>
+			Y: <input type="number" id="textInput" class="yInput"><br><hr><br><div id="operationArea1"></div>`;
+}
+
+function calculateLinearRegression() {
+	pointsX = document.getElementsByClassName("xInput");
+	pointsY = document.getElementsByClassName("yInput");
+	points = [];
+	for (int i = 0; i < pointsX.length; i++) {
+		point = [pointsX[i].value, pointsY[i].value];
+		points.push(point);
+	}
+	
+	numerator = 0;
+	denominator = 0;
+	xSum = 0;
+	ySum = 0;
+	
+	for (int i = 0; i < points.length; i++) {
+		xSum += points[i][0]; 
+		ySum += points[i][1]; 
+	}
+	
+	xAverage = xSum/points.length;
+	yAverage = ySum/points.length;
+	
+	for (int i = 0; i < points.length; i++) {
+		x = points[i][0];	
+		y = points[i][1];	
+		numerator += (x - xAverage) * (y - yAverage);
+		denominator += (x - xAverage) * (x - xAverage);
+	}
+	
+	m = numerator/denominator;
+	b = yAverage - (m * xAverage);
+	
+	appendToOperationArea(
+			`
+			<p>Rule is: y = ${m} * x + ${b}</p>
+			`
+	,1);
+	autoResizeResultTextArea();
+}
+
 function calculatePythagore(mode) {
 	/*
 		0: Hypotenuse
@@ -298,6 +343,7 @@ function update(mode) {
 		10: Hypotenuse from Pythagore
 		11: Missing Side from Pythagore
 		12: Cone from Circle
+		13: Linear Regression from main
 	*/
 	
 	switch (mode) {
@@ -434,6 +480,17 @@ function update(mode) {
 			<br><button id="calculateButton" onclick="calculateCircle(2)">Calculate</button>
 			`
 			,2);
+			break;
+			
+		case 13:
+			newOperationArea(
+			`
+			<button id="calculateButton" onclick="addLinearRegressionInputField()">Add Point</button><br>
+			<button id="calculateButton" onclick="calculateLinearRegression()">Calculate</button><hr>
+			X: <input type="number" id="textInput" class="xInput"><br>
+			Y: <input type="number" id="textInput" class="yInput"><br>
+			`
+			);
 			break;
 		
 		default:

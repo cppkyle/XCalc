@@ -20,7 +20,7 @@ function calculateLinearRegression() {
 	pointsX = document.getElementsByClassName("xInput");
 	pointsY = document.getElementsByClassName("yInput");
 	points = [];
-	for (int i = 0; i < pointsX.length; i++) {
+	for (var i = 0; i < pointsX.length; i++) {
 		point = [pointsX[i].value, pointsY[i].value];
 		points.push(point);
 	}
@@ -30,7 +30,7 @@ function calculateLinearRegression() {
 	xSum = 0;
 	ySum = 0;
 	
-	for (int i = 0; i < points.length; i++) {
+	for (var i = 0; i < points.length; i++) {
 		xSum += points[i][0]; 
 		ySum += points[i][1]; 
 	}
@@ -38,7 +38,7 @@ function calculateLinearRegression() {
 	xAverage = xSum/points.length;
 	yAverage = ySum/points.length;
 	
-	for (int i = 0; i < points.length; i++) {
+	for (var i = 0; i < points.length; i++) {
 		x = points[i][0];	
 		y = points[i][1];	
 		numerator += (x - xAverage) * (y - yAverage);

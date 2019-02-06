@@ -12,6 +12,7 @@ function autoResizeResultTextArea() {
 }
 
 function addLinearRegressionInputField() {
+	document.getElementById("operationArea0").innerHTML.replace(/\<div id\=\"operationArea1\"\>\<\/div\>/g, "");
 	document.getElementById("operationArea0").innerHTML += `X: <input type="number" id="textInput" class="xInput"><br>
 			Y: <input type="number" id="textInput" class="yInput"><br><hr><br><div id="operationArea1"></div>`;
 }

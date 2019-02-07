@@ -484,7 +484,7 @@ function update(mode) {
 		case 13:
 			newOperationArea(
 			`
-			<button id="calculateButton" onclick="addLinearRegressionInputField()">Add Point</button><br>
+			<button id="calculateButton" onclick="addLinearRegressionInputField()">Add Point</button><br><br>
 			<button id="calculateButton" onclick="calculateLinearRegression()">Calculate</button><hr>
 			<div id="operationArea1"></div><hr>
 			X: <input type="number" id="textInput" class="xInput"><br>

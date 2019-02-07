@@ -488,7 +488,7 @@ function update(mode) {
 			<button id="calculateButton" onclick="calculateLinearRegression()">Calculate</button><hr>
 			<div id="operationArea1"></div><hr>
 			X: <input type="number" id="textInput" class="xInput"><br>
-			Y: <input type="number" id="textInput" class="yInput"><br>
+			Y: <input type="number" id="textInput" class="yInput"><br><br>
 			`
 			);
 			break;

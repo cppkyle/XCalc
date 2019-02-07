@@ -12,9 +12,8 @@ function autoResizeResultTextArea() {
 }
 
 function addLinearRegressionInputField() {
-	document.getElementById("operationArea0").innerHTML.replace(/\<div id\=\"operationArea1\"\>\<\/div\>/g, "");
 	document.getElementById("operationArea0").innerHTML += `X: <input type="number" id="textInput" class="xInput"><br>
-			Y: <input type="number" id="textInput" class="yInput"><br><hr><br><div id="operationArea1"></div>`;
+			Y: <input type="number" id="textInput" class="yInput"><br><br>`;
 }
 
 function calculateLinearRegression() {
@@ -54,7 +53,6 @@ function calculateLinearRegression() {
 			<p>Rule is: y = ${m} * x + ${b}</p>
 			`
 	,1);
-	autoResizeResultTextArea();
 }
 
 function calculatePythagore(mode) {
@@ -488,6 +486,7 @@ function update(mode) {
 			`
 			<button id="calculateButton" onclick="addLinearRegressionInputField()">Add Point</button><br>
 			<button id="calculateButton" onclick="calculateLinearRegression()">Calculate</button><hr>
+			<div id="operationArea1"></div><hr>
 			X: <input type="number" id="textInput" class="xInput"><br>
 			Y: <input type="number" id="textInput" class="yInput"><br>
 			`

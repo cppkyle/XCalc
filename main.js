@@ -13,7 +13,7 @@ function autoResizeResultTextArea() {
 
 function addLinearRegressionInputField() {
 	document.getElementById("operationArea0").innerHTML += `<br>X: <input type="number" id="textInput" class="xInput"><br>
-			Y: <input type="number" id="textInput" class="yInput">`;
+			Y: <input type="number" id="textInput" class="yInput"><br>`;
 }
 
 function calculateLinearRegression() {

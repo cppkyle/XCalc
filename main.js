@@ -21,7 +21,7 @@ function calculateLinearRegression() {
 	pointsY = document.getElementsByClassName("yInput");
 	points = [];
 	for (var i = 0; i < pointsX.length; i++) {
-		point = [pointsX[i].value, pointsY[i].value];
+		point = [parseInt(pointsX[i].value), parseInt(pointsY[i].value)];
 		points.push(point);
 	}
 	
